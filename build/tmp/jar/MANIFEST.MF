@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Specification-Title: mujmod
-Specification-Vendor: YourName
-Specification-Version: 1
-Implementation-Title: Mujmod
-Implementation-Version: 1.0.0
-Implementation-Vendor: YourName
-Implementation-Timestamp: 2026-04-07T00:21:06+0200
-
