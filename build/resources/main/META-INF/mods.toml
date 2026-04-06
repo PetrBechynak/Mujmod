@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="MIT"
+
+[[mods]]
+    modId="mujmod"
+    version="${file.jarVersion}"
+    displayName="MujMod"
+    # logoFile="mujmod.png"
+    description='''
+        My first Minecraft mod.
+    '''
+
+[[dependencies.mujmod]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.mujmod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
