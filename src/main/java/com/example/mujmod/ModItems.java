@@ -26,11 +26,17 @@ public class ModItems {
             () -> new Item(new Item.Properties()
                     .setId(ResourceKey.create(Registries.ITEM,
                             Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "tutorial_axe")))
-                    .axe(ToolMaterial.NETHERITE, 12.0f, 0.4f)));
+                    .axe(ToolMaterial.NETHERITE, 17.0f, 0.4f)));
 
     public static final RegistryObject<Item> TUTORIAL_HELMET = ITEMS.register("tutorial_helmet",
             () -> new Item(new Item.Properties()
                     .setId(ResourceKey.create(Registries.ITEM,
                             Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "tutorial_helmet")))
                     .humanoidArmor(ArmorMaterials.IRON, ArmorType.HELMET)));
+
+        public static final RegistryObject<Item> TUTORIAL_PICKAXE = ITEMS.register("tutorial_pickaxe",
+            () -> new Item(new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM,
+                            Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "tutorial_pickaxe")))
+                    .pickaxe(ToolMaterial.NETHERITE, 17.0f, 0.4f)));
 }

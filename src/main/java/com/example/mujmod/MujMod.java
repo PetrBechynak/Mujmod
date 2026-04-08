@@ -30,6 +30,7 @@ public class MujMod {
             event.accept(ModItems.TUTORIAL_SWORD);
             event.accept(ModItems.TUTORIAL_HELMET);
             event.accept(ModItems.TUTORIAL_AXE);
+            event.accept(ModItems.TUTORIAL_PICKAXE);
         }
     }
 }
