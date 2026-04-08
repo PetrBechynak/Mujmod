@@ -20,6 +20,7 @@ public class MujMod {
         BusGroup modBusGroup = context.getModBusGroup();
 
         ModItems.ITEMS.register(modBusGroup);
+        ModBlocks.BLOCKS.register(modBusGroup);
         BuildCreativeModeTabContentsEvent.BUS.addListener(this::addCreative);
 
         LOGGER.info("MujMod byl načten!");
@@ -31,6 +32,10 @@ public class MujMod {
             event.accept(ModItems.TUTORIAL_HELMET);
             event.accept(ModItems.TUTORIAL_AXE);
             event.accept(ModItems.TUTORIAL_PICKAXE);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.TUTORIAL_BLOCK_ITEM);
         }
     }
 }
