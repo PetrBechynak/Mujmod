@@ -6,6 +6,7 @@ import com.mojang.logging.LogUtils;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -22,6 +23,7 @@ public class MujMod {
         ModItems.ITEMS.register(modBusGroup);
         ModBlocks.BLOCKS.register(modBusGroup);
         BuildCreativeModeTabContentsEvent.BUS.addListener(this::addCreative);
+        TickEvent.PlayerTickEvent.Post.BUS.addListener(TutorialArmorEffects::onPlayerTick);
 
         LOGGER.info("MujMod byl načten!");
     }
@@ -30,8 +32,16 @@ public class MujMod {
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.TUTORIAL_SWORD);
             event.accept(ModItems.TUTORIAL_HELMET);
+            event.accept(ModItems.TUTORIAL_CHESTPLATE);
+            event.accept(ModItems.TUTORIAL_LEGGINGS);
+            event.accept(ModItems.TUTORIAL_BOOTS);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.TUTORIAL_AXE);
             event.accept(ModItems.TUTORIAL_PICKAXE);
+            event.accept(ModItems.TUTORIAL_SHOVEL);
+            event.accept(ModItems.TUTORIAL_HOE);
         }
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {

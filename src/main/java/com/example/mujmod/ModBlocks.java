@@ -18,11 +18,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TUTORIAL_BLOCK = BLOCKS.register("tutorial_block",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.IRON_BLOCK)
+                    .strength(8.0F, 12.0F)
+                    .lightLevel(state -> 10)
+                    .requiresCorrectToolForDrops()
                     .setId(ResourceKey.create(Registries.BLOCK,
                             Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "tutorial_block")))));
 
     public static final RegistryObject<Item> TUTORIAL_BLOCK_ITEM = ModItems.ITEMS.register("tutorial_block",
-            () -> new BlockItem(TUTORIAL_BLOCK.get(), new Item.Properties()
-                    .setId(ResourceKey.create(Registries.ITEM,
-                            Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "tutorial_block")))));
+            () -> new BlockItem(TUTORIAL_BLOCK.get(), ModItems.tutorialItemProperties("tutorial_block")));
 }

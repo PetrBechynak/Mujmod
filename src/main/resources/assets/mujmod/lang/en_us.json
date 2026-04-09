@@ -1,7 +1,12 @@
 {
   "item.mujmod.tutorial_sword": "Muj Tutorial Sword",
   "item.mujmod.tutorial_helmet": "Muj Tutorial Helmet",
+  "item.mujmod.tutorial_chestplate": "Muj Tutorial Chestplate",
+  "item.mujmod.tutorial_leggings": "Muj Tutorial Leggings",
+  "item.mujmod.tutorial_boots": "Muj Tutorial Boots",
   "item.mujmod.tutorial_axe": "Muj Tutorial Axe",
+  "item.mujmod.tutorial_shovel": "Muj Tutorial Shovel",
+  "item.mujmod.tutorial_hoe": "Muj Tutorial Hoe",
   "item.mujmod.tutorial_pickaxe": "Muj Tutorial Pickaxe",
   "block.mujmod.tutorial_block": "Tutorial Block",
   "item.mujmod.tutorial_block": "Tutorial Block"
