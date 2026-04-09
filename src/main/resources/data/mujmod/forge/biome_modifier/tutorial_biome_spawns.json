@@ -1,0 +1,48 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "mujmod:tutorial_grove",
+  "spawners": [
+    {
+      "type": "minecraft:sheep",
+      "weight": 14,
+      "minCount": 3,
+      "maxCount": 5
+    },
+    {
+      "type": "minecraft:pig",
+      "weight": 10,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:rabbit",
+      "weight": 8,
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "type": "minecraft:wolf",
+      "weight": 6,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:bee",
+      "weight": 12,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "minecraft:zombie",
+      "weight": 80,
+      "minCount": 1,
+      "maxCount": 3
+    },
+    {
+      "type": "minecraft:skeleton",
+      "weight": 85,
+      "minCount": 1,
+      "maxCount": 3
+    }
+  ]
+}

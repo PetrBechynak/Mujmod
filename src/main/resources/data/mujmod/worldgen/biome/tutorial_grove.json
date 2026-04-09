@@ -1,0 +1,17 @@
+{
+  "has_precipitation": true,
+  "temperature": 0.65,
+  "downfall": 0.85,
+  "effects": {
+    "water_color": "#46B7E8",
+    "foliage_color": "#59C66D",
+    "dry_foliage_color": "#8ACB5A",
+    "grass_color": "#7BE36A",
+    "grass_color_modifier": "none"
+  },
+  "carvers": [],
+  "features": [],
+  "creature_spawn_probability": 0.2,
+  "spawners": {},
+  "spawn_costs": {}
+}

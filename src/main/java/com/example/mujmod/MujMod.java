@@ -7,6 +7,8 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.level.LevelEvent;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -20,10 +22,14 @@ public class MujMod {
     public MujMod(FMLJavaModLoadingContext context) {
         BusGroup modBusGroup = context.getModBusGroup();
 
+        ModBiomes.registerOverworldBiomes();
         ModItems.ITEMS.register(modBusGroup);
         ModBlocks.BLOCKS.register(modBusGroup);
+        ModFeatures.FEATURES.register(modBusGroup);
         BuildCreativeModeTabContentsEvent.BUS.addListener(this::addCreative);
         TickEvent.PlayerTickEvent.Post.BUS.addListener(TutorialArmorEffects::onPlayerTick);
+        LevelEvent.CreateSpawnPosition.BUS.addListener(TutorialSpawnHandler::onCreateSpawnPosition);
+        PlayerEvent.PlayerLoggedInEvent.BUS.addListener(TutorialSpawnHandler::onPlayerLoggedIn);
 
         LOGGER.info("MujMod byl načten!");
     }

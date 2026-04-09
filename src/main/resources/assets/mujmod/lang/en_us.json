@@ -9,6 +9,7 @@
   "item.mujmod.tutorial_hoe": "Muj Tutorial Hoe",
   "item.mujmod.tutorial_pickaxe": "Muj Tutorial Pickaxe",
   "block.mujmod.tutorial_block": "Tutorial Block",
-  "item.mujmod.tutorial_block": "Tutorial Block"
+  "item.mujmod.tutorial_block": "Tutorial Block",
+  "biome.mujmod.tutorial_grove": "Tutorial Grove"
 }
 
