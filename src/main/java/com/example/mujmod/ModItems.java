@@ -23,7 +23,7 @@ public class ModItems {
                     .sword(ToolMaterial.IRON, 3.0f, -2.4f)));
 
     public static final RegistryObject<Item> TUTORIAL_AXE = ITEMS.register("tutorial_axe",
-            () -> new Item(new Item.Properties()
+            () -> new TreeFellingAxeItem(new Item.Properties()
                     .setId(ResourceKey.create(Registries.ITEM,
                             Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "tutorial_axe")))
                     .axe(ToolMaterial.NETHERITE, 17.0f, 0.4f)));
@@ -34,8 +34,8 @@ public class ModItems {
                             Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "tutorial_helmet")))
                     .humanoidArmor(ArmorMaterials.IRON, ArmorType.HELMET)));
 
-        public static final RegistryObject<Item> TUTORIAL_PICKAXE = ITEMS.register("tutorial_pickaxe",
-            () -> new Item(new Item.Properties()
+    public static final RegistryObject<Item> TUTORIAL_PICKAXE = ITEMS.register("tutorial_pickaxe",
+            () -> new ThreeByThreePickaxeItem(new Item.Properties()
                     .setId(ResourceKey.create(Registries.ITEM,
                             Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "tutorial_pickaxe")))
                     .pickaxe(ToolMaterial.NETHERITE, 17.0f, 0.4f)));
