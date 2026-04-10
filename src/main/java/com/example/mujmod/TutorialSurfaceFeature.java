@@ -1,6 +1,7 @@
 package com.example.mujmod;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Blocks;
@@ -34,7 +35,7 @@ public final class TutorialSurfaceFeature extends Feature<NoneFeatureConfigurati
                     BlockPos currentPos = new BlockPos(x, y, z);
                     BlockState currentState = level.getBlockState(currentPos);
 
-                    if (currentState.isAir() || !currentState.getFluidState().isEmpty() || currentState.is(Blocks.BEDROCK)) {
+                    if (!shouldReplace(currentState)) {
                         continue;
                     }
 
@@ -45,5 +46,21 @@ public final class TutorialSurfaceFeature extends Feature<NoneFeatureConfigurati
         }
 
         return placedAnyBlock;
+    }
+
+    private static boolean shouldReplace(BlockState blockState) {
+        return blockState.is(BlockTags.BASE_STONE_OVERWORLD)
+                || blockState.is(BlockTags.DIRT)
+                || blockState.is(BlockTags.SAND)
+                || blockState.is(BlockTags.DEEPSLATE_ORE_REPLACEABLES)
+                || blockState.is(BlockTags.STONE_ORE_REPLACEABLES)
+                || blockState.is(BlockTags.OVERWORLD_CARVER_REPLACEABLES)
+                || blockState.is(Blocks.GRASS_BLOCK)
+                || blockState.is(Blocks.PODZOL)
+                || blockState.is(Blocks.COARSE_DIRT)
+                || blockState.is(Blocks.MYCELIUM)
+                || blockState.is(Blocks.GRAVEL)
+                || blockState.is(Blocks.CLAY)
+                || blockState.is(Blocks.SNOW_BLOCK);
     }
 }

@@ -10,7 +10,7 @@ import net.minecraftforge.common.BiomeManager;
 
 public final class ModBiomes {
 
-    private static final int OVERWORLD_WEIGHT_REPEATS = 12;
+    private static final int OVERWORLD_WEIGHT_REPEATS = 32;
 
     public static final ResourceKey<Biome> TUTORIAL_GROVE = ResourceKey.create(
             Registries.BIOME,
@@ -29,7 +29,7 @@ public final class ModBiomes {
 
         for (BiomeManager.BiomeType biomeType : biomeTypes) {
             for (int index = 0; index < OVERWORLD_WEIGHT_REPEATS; index++) {
-                BiomeManager.addBiome(biomeType, new BiomeManager.BiomeEntry(TUTORIAL_GROVE, 100));
+                BiomeManager.addBiome(biomeType, new BiomeManager.BiomeEntry(TUTORIAL_GROVE, 200));
             }
         }
 
