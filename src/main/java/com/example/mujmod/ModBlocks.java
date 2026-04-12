@@ -16,14 +16,23 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, MujMod.MOD_ID);
 
-    public static final RegistryObject<Block> TUTORIAL_BLOCK = BLOCKS.register("tutorial_block",
+    public static final RegistryObject<Block> MITHRIL_BLOCK = BLOCKS.register("mithril_block",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.IRON_BLOCK)
-                    .strength(8.0F, 12.0F)
-                    .lightLevel(state -> 10)
+                    .strength(6.0F, 8.0F)
                     .requiresCorrectToolForDrops()
                     .setId(ResourceKey.create(Registries.BLOCK,
-                            Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "tutorial_block")))));
+                            Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "mithril_block")))));
 
-    public static final RegistryObject<Item> TUTORIAL_BLOCK_ITEM = ModItems.ITEMS.register("tutorial_block",
-            () -> new BlockItem(TUTORIAL_BLOCK.get(), ModItems.tutorialItemProperties("tutorial_block")));
+    public static final RegistryObject<Block> MITHRIL_ORE = BLOCKS.register("mithril_ore",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.IRON_ORE)
+                    .strength(3.0F, 3.0F)
+                    .requiresCorrectToolForDrops()
+                    .setId(ResourceKey.create(Registries.BLOCK,
+                            Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "mithril_ore")))));
+
+    public static final RegistryObject<Item> MITHRIL_BLOCK_ITEM = ModItems.ITEMS.register("mithril_block",
+            () -> new BlockItem(MITHRIL_BLOCK.get(), ModItems.mithrilItemProperties("mithril_block")));
+
+    public static final RegistryObject<Item> MITHRIL_ORE_ITEM = ModItems.ITEMS.register("mithril_ore",
+            () -> new BlockItem(MITHRIL_ORE.get(), ModItems.mithrilItemProperties("mithril_ore")));
 }

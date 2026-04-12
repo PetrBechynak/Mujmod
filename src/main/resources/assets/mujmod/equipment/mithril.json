@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mujmod:mithril"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "mujmod:mithril"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mujmod:mithril"
+      }
+    ]
+  }
+}

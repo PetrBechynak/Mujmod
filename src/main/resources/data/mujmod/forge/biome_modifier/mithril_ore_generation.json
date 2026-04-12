@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "mujmod:mithril_ore_upper",
+    "mujmod:mithril_ore_small"
+  ],
+  "step": "underground_ores"
+}

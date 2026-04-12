@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mujmod:block/mithril_ore"
+    }
+  }
+}

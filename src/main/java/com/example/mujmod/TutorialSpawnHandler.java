@@ -94,7 +94,7 @@ public final class TutorialSpawnHandler {
     private static void applyTutorialBlocksNearSpawn(ServerLevel serverLevel, BlockPos centerPos) {
         int minY = serverLevel.getMinY();
         int maxY = serverLevel.getMaxY();
-        BlockState tutorialBlock = ModBlocks.TUTORIAL_BLOCK.get().defaultBlockState();
+        BlockState tutorialBlock = ModBlocks.MITHRIL_BLOCK.get().defaultBlockState();
         int radiusSquared = FALLBACK_AREA_RADIUS_BLOCKS * FALLBACK_AREA_RADIUS_BLOCKS;
 
         for (int x = centerPos.getX() - FALLBACK_AREA_RADIUS_BLOCKS; x <= centerPos.getX() + FALLBACK_AREA_RADIUS_BLOCKS; x++) {

@@ -24,9 +24,9 @@ public final class TutorialArmorEffects {
     }
 
     private static boolean isWearingFullTutorialSet(Player player) {
-        return player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.TUTORIAL_HELMET.get()
-                && player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.TUTORIAL_CHESTPLATE.get()
-                && player.getItemBySlot(EquipmentSlot.LEGS).getItem() == ModItems.TUTORIAL_LEGGINGS.get()
-                && player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.TUTORIAL_BOOTS.get();
+        return player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.MITHRIL_HELMET.get()
+            && player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.MITHRIL_CHESTPLATE.get()
+            && player.getItemBySlot(EquipmentSlot.LEGS).getItem() == ModItems.MITHRIL_LEGGINGS.get()
+            && player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.MITHRIL_BOOTS.get();
     }
 }

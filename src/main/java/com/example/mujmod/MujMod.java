@@ -47,23 +47,29 @@ public class MujMod {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
-            event.accept(ModItems.TUTORIAL_SWORD);
-            event.accept(ModItems.TUTORIAL_HELMET);
-            event.accept(ModItems.TUTORIAL_CHESTPLATE);
-            event.accept(ModItems.TUTORIAL_LEGGINGS);
-            event.accept(ModItems.TUTORIAL_BOOTS);
+            event.accept(ModItems.MITHRIL_SWORD);
+            event.accept(ModItems.MITHRIL_HELMET);
+            event.accept(ModItems.MITHRIL_CHESTPLATE);
+            event.accept(ModItems.MITHRIL_LEGGINGS);
+            event.accept(ModItems.MITHRIL_BOOTS);
             event.accept(ModItems.MINI_QUEEN_SPAWN_EGG);
         }
 
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.TUTORIAL_AXE);
-            event.accept(ModItems.TUTORIAL_PICKAXE);
-            event.accept(ModItems.TUTORIAL_SHOVEL);
-            event.accept(ModItems.TUTORIAL_HOE);
+            event.accept(ModItems.MITHRIL_AXE);
+            event.accept(ModItems.MITHRIL_PICKAXE);
+            event.accept(ModItems.MITHRIL_SHOVEL);
+            event.accept(ModItems.MITHRIL_HOE);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.RAW_MITHRIL);
+            event.accept(ModItems.MITHRIL_INGOT);
         }
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.TUTORIAL_BLOCK_ITEM);
+            event.accept(ModBlocks.MITHRIL_BLOCK_ITEM);
+            event.accept(ModBlocks.MITHRIL_ORE_ITEM);
         }
     }
 }

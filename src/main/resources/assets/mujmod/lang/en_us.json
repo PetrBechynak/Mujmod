@@ -1,17 +1,21 @@
 {
-  "item.mujmod.tutorial_sword": "Muj Tutorial Sword",
-  "item.mujmod.tutorial_helmet": "Muj Tutorial Helmet",
-  "item.mujmod.tutorial_chestplate": "Muj Tutorial Chestplate",
-  "item.mujmod.tutorial_leggings": "Muj Tutorial Leggings",
-  "item.mujmod.tutorial_boots": "Muj Tutorial Boots",
-  "item.mujmod.tutorial_axe": "Muj Tutorial Axe",
-  "item.mujmod.tutorial_shovel": "Muj Tutorial Shovel",
-  "item.mujmod.tutorial_hoe": "Muj Tutorial Hoe",
-  "item.mujmod.tutorial_pickaxe": "Muj Tutorial Pickaxe",
-  "block.mujmod.tutorial_block": "Tutorial Block",
-  "item.mujmod.tutorial_block": "Tutorial Block",
+  "item.mujmod.raw_mithril": "Raw Mithril",
+  "item.mujmod.mithril_ingot": "Mithril Ingot",
+  "item.mujmod.mithril_sword": "Mithril Sword",
+  "item.mujmod.mithril_helmet": "Mithril Helmet",
+  "item.mujmod.mithril_chestplate": "Mithril Chestplate",
+  "item.mujmod.mithril_leggings": "Mithril Leggings",
+  "item.mujmod.mithril_boots": "Mithril Boots",
+  "item.mujmod.mithril_axe": "Mithril Axe",
+  "item.mujmod.mithril_shovel": "Mithril Shovel",
+  "item.mujmod.mithril_hoe": "Mithril Hoe",
+  "item.mujmod.mithril_pickaxe": "Mithril Pickaxe",
+  "block.mujmod.mithril_block": "Mithril Block",
+  "item.mujmod.mithril_block": "Mithril Block",
+  "block.mujmod.mithril_ore": "Mithril Ore",
+  "item.mujmod.mithril_ore": "Mithril Ore",
   "biome.mujmod.tutorial_grove": "Tutorial Grove",
   "entity.mujmod.mini_queen": "Miniqueen",
-  "item.mujmod.mini_queen_spawn_egg": "Tutorial Mob Spawn Egg"
+  "item.mujmod.mini_queen_spawn_egg": "Mini Queen Spawn Egg"
 }
 

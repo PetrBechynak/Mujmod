@@ -37,17 +37,17 @@ public class MiniQueenEntity extends Zombie {
         BlockPos below = this.blockPosition().below();
         BlockState belowState = this.level().getBlockState(below);
         
-        if (belowState.is(ModBlocks.TUTORIAL_BLOCK.get())) {
+        if (belowState.is(ModBlocks.MITHRIL_BLOCK.get())) {
             // Na validním blocku - zapamatuju si jej
             this.lastValidTutorialBlock = below;
         } else {
-            // Mimo tutorial_block - vrátit zpět
+            // Mimo mithril_block - vratit zpet.
             if (this.lastValidTutorialBlock != null) {
                 this.setPos(this.lastValidTutorialBlock.getX() + 0.5,
                         this.lastValidTutorialBlock.getY() + 1,
                         this.lastValidTutorialBlock.getZ() + 0.5);
             } else {
-                // Nikdy nebyla validně umístěna - zemřít
+                // Nikdy nebyla validne umistena - zemrit.
                 this.setHealth(0.0f);
             }
         }
@@ -56,6 +56,6 @@ public class MiniQueenEntity extends Zombie {
     @Override
     public boolean checkSpawnRules(LevelAccessor level, EntitySpawnReason reason) {
         BlockPos below = this.blockPosition().below();
-        return level.getBlockState(below).is(ModBlocks.TUTORIAL_BLOCK.get());
+        return level.getBlockState(below).is(ModBlocks.MITHRIL_BLOCK.get());
     }
 }

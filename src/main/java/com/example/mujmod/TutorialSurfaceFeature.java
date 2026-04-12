@@ -24,7 +24,7 @@ public final class TutorialSurfaceFeature extends Feature<NoneFeatureConfigurati
         int minX = chunkPos.getMinBlockX();
         int minZ = chunkPos.getMinBlockZ();
         int minY = level.getMinY();
-        BlockState tutorialBlock = ModBlocks.TUTORIAL_BLOCK.get().defaultBlockState();
+        BlockState tutorialBlock = ModBlocks.MITHRIL_BLOCK.get().defaultBlockState();
         boolean placedAnyBlock = false;
 
         for (int x = minX; x < minX + 16; x++) {
