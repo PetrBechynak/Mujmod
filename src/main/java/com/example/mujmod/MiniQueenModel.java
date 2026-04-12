@@ -35,7 +35,7 @@ public class MiniQueenModel<S extends ZombieRenderState> extends ZombieModel<S> 
                 CubeListBuilder.create().texOffs(0, 0)
                         .addBox(-4.0f, -8.0f, -4.0f, 8.0f, 8.0f, 8.0f, CubeDeformation.NONE),
                 PartPose.offset(8.0f, 0.0f, 0.0f));
-        return LayerDefinition.create(mesh, 64, 32);
+        return LayerDefinition.create(mesh, 64, 64);
     }
 
     @Override
