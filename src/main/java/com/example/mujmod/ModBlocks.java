@@ -17,7 +17,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, MujMod.MOD_ID);
 
     public static final RegistryObject<Block> MITHRIL_BLOCK = BLOCKS.register("mithril_block",
-            () -> new Block(Block.Properties.ofFullCopy(Blocks.IRON_BLOCK)
+            () -> new MithrilBlock(Block.Properties.ofFullCopy(Blocks.IRON_BLOCK)
                     .strength(6.0F, 8.0F)
                     .requiresCorrectToolForDrops()
                     .setId(ResourceKey.create(Registries.BLOCK,
