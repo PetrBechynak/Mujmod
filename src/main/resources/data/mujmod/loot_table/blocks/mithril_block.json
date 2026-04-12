@@ -11,7 +11,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "mujmod:mithril_block"
+          "name": "mujmod:mithril_ore"
         }
       ],
       "rolls": 1.0
