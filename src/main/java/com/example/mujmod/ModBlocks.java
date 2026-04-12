@@ -35,4 +35,17 @@ public class ModBlocks {
 
     public static final RegistryObject<Item> MITHRIL_ORE_ITEM = ModItems.ITEMS.register("mithril_ore",
             () -> new BlockItem(MITHRIL_ORE.get(), ModItems.mithrilItemProperties("mithril_ore")));
+
+    public static final RegistryObject<Block> TUTORIAL_SHELF = BLOCKS.register("tutorial_shelf",
+            () -> new VerticalShelfBlock(Block.Properties.ofFullCopy(Blocks.IRON_BLOCK)
+                    .strength(8.0F, 12.0F)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+                    .setId(ResourceKey.create(Registries.BLOCK,
+                            Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "tutorial_shelf")))));
+
+    public static final RegistryObject<Item> TUTORIAL_SHELF_ITEM = ModItems.ITEMS.register("tutorial_shelf",
+            () -> new BlockItem(TUTORIAL_SHELF.get(), new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM,
+                            Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "tutorial_shelf")))));
 }

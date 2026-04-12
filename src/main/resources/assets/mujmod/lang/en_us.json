@@ -16,6 +16,8 @@
   "item.mujmod.mithril_ore": "Mithril Ore",
   "biome.mujmod.tutorial_grove": "Tutorial Grove",
   "entity.mujmod.mini_queen": "Miniqueen",
-  "item.mujmod.mini_queen_spawn_egg": "Mini Queen Spawn Egg"
+  "item.mujmod.mini_queen_spawn_egg": "Mini Queen Spawn Egg",
+  "block.mujmod.tutorial_shelf": "Tutorial Shelf",
+  "item.mujmod.tutorial_shelf": "Tutorial Shelf"
 }
 
