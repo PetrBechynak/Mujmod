@@ -7,8 +7,8 @@ import net.minecraft.resources.Identifier;
 
 public class MiniQueenRenderer extends HumanoidMobRenderer<MiniQueenEntity, ZombieRenderState, MiniQueenModel<ZombieRenderState>> {
 
-    private static final Identifier ZOMBIE_TEXTURE =
-            Identifier.fromNamespaceAndPath("minecraft", "textures/entity/zombie/zombie.png");
+    private static final Identifier MINI_QUEEN_TEXTURE =
+            Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "textures/entity/mini_queen.png");
 
     public MiniQueenRenderer(EntityRendererProvider.Context context) {
         super(context,
@@ -23,6 +23,6 @@ public class MiniQueenRenderer extends HumanoidMobRenderer<MiniQueenEntity, Zomb
 
     @Override
     public Identifier getTextureLocation(ZombieRenderState state) {
-        return ZOMBIE_TEXTURE;
+        return MINI_QUEEN_TEXTURE;
     }
 }

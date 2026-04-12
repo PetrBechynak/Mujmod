@@ -30,11 +30,19 @@ public class MiniQueenModel<S extends ZombieRenderState> extends ZombieModel<S> 
     public static LayerDefinition createBodyLayer() {
         MeshDefinition mesh = HumanoidModel.createMesh(CubeDeformation.NONE, 0.0f);
         PartDefinition root = mesh.getRoot();
-        // Přidáme druhou hlavu jako potomka rootu, posunutou 8 pixelů doprava
+        root.addOrReplaceChild("head",
+            CubeListBuilder.create().texOffs(0, 0)
+                .addBox(-4.0f, -8.0f, -4.0f, 8.0f, 8.0f, 8.0f, CubeDeformation.NONE),
+            PartPose.offset(-4.0f, 0.0f, 0.0f));
+        root.addOrReplaceChild("hat",
+            CubeListBuilder.create().texOffs(32, 0)
+                .addBox(-4.0f, -8.0f, -4.0f, 8.0f, 8.0f, 8.0f, new CubeDeformation(0.5f)),
+            PartPose.offset(-4.0f, 0.0f, 0.0f));
+        // Dve hlavy vedle sebe, symetricky kolem stredu tela.
         root.addOrReplaceChild("extra_head",
                 CubeListBuilder.create().texOffs(0, 0)
                         .addBox(-4.0f, -8.0f, -4.0f, 8.0f, 8.0f, 8.0f, CubeDeformation.NONE),
-                PartPose.offset(8.0f, 0.0f, 0.0f));
+            PartPose.offset(4.0f, 0.0f, 0.0f));
         return LayerDefinition.create(mesh, 64, 64);
     }
 
