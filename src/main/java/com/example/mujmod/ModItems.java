@@ -7,6 +7,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
@@ -71,6 +72,12 @@ public class ModItems {
     public static final RegistryObject<Item> TUTORIAL_PICKAXE = ITEMS.register("tutorial_pickaxe",
             () -> new ThreeByThreePickaxeItem(tutorialItemProperties("tutorial_pickaxe")
                     .pickaxe(ToolMaterial.NETHERITE, 17.0f, 0.4f)));
+
+    public static final RegistryObject<Item> MINI_QUEEN_SPAWN_EGG = ITEMS.register("mini_queen_spawn_egg",
+            () -> new SpawnEggItem(new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM,
+                            Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "mini_queen_spawn_egg")))
+                    .spawnEgg(ModEntities.MINI_QUEEN.get())));
 
     static Item.Properties tutorialItemProperties(String itemName) {
         return new Item.Properties()

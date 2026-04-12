@@ -10,6 +10,8 @@
   "item.mujmod.tutorial_pickaxe": "Muj Tutorial Pickaxe",
   "block.mujmod.tutorial_block": "Tutorial Block",
   "item.mujmod.tutorial_block": "Tutorial Block",
-  "biome.mujmod.tutorial_grove": "Tutorial Grove"
+  "biome.mujmod.tutorial_grove": "Tutorial Grove",
+  "entity.mujmod.mini_queen": "Miniqueen",
+  "item.mujmod.mini_queen_spawn_egg": "Tutorial Mob Spawn Egg"
 }
 

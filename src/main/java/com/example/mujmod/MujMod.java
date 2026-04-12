@@ -5,8 +5,10 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.level.LevelEvent;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
@@ -26,10 +28,19 @@ public class MujMod {
         ModItems.ITEMS.register(modBusGroup);
         ModBlocks.BLOCKS.register(modBusGroup);
         ModFeatures.FEATURES.register(modBusGroup);
+        ModEntities.ENTITY_TYPES.register(modBusGroup);
         BuildCreativeModeTabContentsEvent.BUS.addListener(this::addCreative);
         TickEvent.PlayerTickEvent.Post.BUS.addListener(TutorialArmorEffects::onPlayerTick);
         LevelEvent.CreateSpawnPosition.BUS.addListener(TutorialSpawnHandler::onCreateSpawnPosition);
         PlayerEvent.PlayerLoggedInEvent.BUS.addListener(TutorialSpawnHandler::onPlayerLoggedIn);
+        EntityAttributeCreationEvent.BUS.addListener(event ->
+                event.put(ModEntities.MINI_QUEEN.get(), MiniQueenEntity.createAttributes().build()));
+        EntityRenderersEvent.RegisterLayerDefinitions.BUS.addListener(event ->
+                event.registerLayerDefinition(MiniQueenModel.LAYER_LOCATION,
+                        MiniQueenModel::createBodyLayer));
+        EntityRenderersEvent.RegisterRenderers.BUS.addListener(event ->
+                event.registerEntityRenderer(ModEntities.MINI_QUEEN.get(),
+                        MiniQueenRenderer::new));
 
         LOGGER.info("MujMod byl načten!");
     }
@@ -41,6 +52,7 @@ public class MujMod {
             event.accept(ModItems.TUTORIAL_CHESTPLATE);
             event.accept(ModItems.TUTORIAL_LEGGINGS);
             event.accept(ModItems.TUTORIAL_BOOTS);
+            event.accept(ModItems.MINI_QUEEN_SPAWN_EGG);
         }
 
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {

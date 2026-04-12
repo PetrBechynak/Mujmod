@@ -43,6 +43,12 @@
       "weight": 85,
       "minCount": 1,
       "maxCount": 3
+    },
+    {
+      "type": "mujmod:mini_queen",
+      "weight": 30,
+      "minCount": 1,
+      "maxCount": 3
     }
   ]
 }
