@@ -98,10 +98,16 @@ public class ModItems {
                             Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "mini_queen_spawn_egg")))
                     .spawnEgg(ModEntities.MINI_QUEEN.get())));
 
-        static Item.Properties mithrilItemProperties(String itemName) {
+    public static final RegistryObject<Item> MUJMOB_SPAWN_EGG = ITEMS.register("mujmob_spawn_egg",
+            () -> new SpawnEggItem(new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM,
+                            Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "mujmob_spawn_egg")))
+                    .spawnEgg(ModEntities.MUJMOB.get())));
+
+    static Item.Properties mithrilItemProperties(String itemName) {
         return new Item.Properties()
                 .setId(ResourceKey.create(Registries.ITEM,
                         Identifier.fromNamespaceAndPath(MujMod.MOD_ID, itemName)))
-                                .rarity(Rarity.UNCOMMON);
+                .rarity(Rarity.UNCOMMON);
     }
 }
