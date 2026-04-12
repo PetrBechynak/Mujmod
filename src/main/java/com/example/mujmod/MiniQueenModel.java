@@ -35,8 +35,7 @@ public class MiniQueenModel<S extends ZombieRenderState> extends ZombieModel<S> 
                 .addBox(-4.0f, -8.0f, -4.0f, 8.0f, 8.0f, 8.0f, CubeDeformation.NONE),
             PartPose.offset(-4.0f, 0.0f, 0.0f));
         root.addOrReplaceChild("hat",
-            CubeListBuilder.create().texOffs(32, 0)
-                .addBox(-4.0f, -8.0f, -4.0f, 8.0f, 8.0f, 8.0f, new CubeDeformation(0.5f)),
+            CubeListBuilder.create(),
             PartPose.offset(-4.0f, 0.0f, 0.0f));
         // Dve hlavy vedle sebe, symetricky kolem stredu tela.
         root.addOrReplaceChild("extra_head",
