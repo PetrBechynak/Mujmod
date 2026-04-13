@@ -1,0 +1,7 @@
+{
+  "parent": "mujmod:item/template_vertical_slab",
+  "textures": {
+    "0": "minecraft:block/tuff",
+    "particle": "minecraft:block/tuff"
+  }
+}

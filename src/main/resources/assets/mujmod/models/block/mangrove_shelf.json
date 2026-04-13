@@ -1,0 +1,7 @@
+{
+  "parent": "mujmod:block/template_vertical_shelf",
+  "textures": {
+    "0": "minecraft:block/mangrove_planks",
+    "particle": "minecraft:block/mangrove_planks"
+  }
+}

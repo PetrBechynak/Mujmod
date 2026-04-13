@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=west": { "model": "mujmod:block/jungle_shelf" },
+    "facing=north": { "model": "mujmod:block/jungle_shelf", "y": 90, "uvlock": true },
+    "facing=east": { "model": "mujmod:block/jungle_shelf", "y": 180, "uvlock": true },
+    "facing=south": { "model": "mujmod:block/jungle_shelf", "y": 270, "uvlock": true }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "mujmod:block/template_vertical_shelf",
+  "textures": {
+    "0": "minecraft:block/cut_sandstone",
+    "particle": "minecraft:block/cut_sandstone"
+  }
+}

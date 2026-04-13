@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=west": { "model": "mujmod:block/waxed_cut_copper_shelf" },
+    "facing=north": { "model": "mujmod:block/waxed_cut_copper_shelf", "y": 90, "uvlock": true },
+    "facing=east": { "model": "mujmod:block/waxed_cut_copper_shelf", "y": 180, "uvlock": true },
+    "facing=south": { "model": "mujmod:block/waxed_cut_copper_shelf", "y": 270, "uvlock": true }
+  }
+}

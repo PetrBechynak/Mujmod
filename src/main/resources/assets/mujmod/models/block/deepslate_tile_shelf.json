@@ -1,0 +1,7 @@
+{
+  "parent": "mujmod:block/template_vertical_shelf",
+  "textures": {
+    "0": "minecraft:block/deepslate_tiles",
+    "particle": "minecraft:block/deepslate_tiles"
+  }
+}

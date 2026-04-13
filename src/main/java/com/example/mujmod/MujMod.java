@@ -70,7 +70,9 @@ public class MujMod {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.MITHRIL_BLOCK_ITEM);
             event.accept(ModBlocks.MITHRIL_ORE_ITEM);
-            event.accept(ModBlocks.TUTORIAL_SHELF_ITEM);
+            for (var shelfItem : ModBlocks.SHELF_ITEMS) {
+                event.accept(shelfItem);
+            }
         }
     }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "mujmod:block/template_vertical_shelf",
+  "textures": {
+    "0": "minecraft:block/stone_bricks",
+    "particle": "minecraft:block/stone_bricks"
+  }
+}

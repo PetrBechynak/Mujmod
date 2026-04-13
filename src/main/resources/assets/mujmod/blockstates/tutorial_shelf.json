@@ -1,7 +1,8 @@
 {
   "variants": {
-    "": {
-      "model": "mujmod:block/tutorial_shelf"
-    }
+    "facing=west": { "model": "mujmod:block/tutorial_shelf" },
+    "facing=north": { "model": "mujmod:block/tutorial_shelf", "y": 90, "uvlock": true },
+    "facing=east": { "model": "mujmod:block/tutorial_shelf", "y": 180, "uvlock": true },
+    "facing=south": { "model": "mujmod:block/tutorial_shelf", "y": 270, "uvlock": true }
   }
 }
