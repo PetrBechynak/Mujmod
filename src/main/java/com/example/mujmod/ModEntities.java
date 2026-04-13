@@ -21,4 +21,12 @@ public class ModEntities {
                             .clientTrackingRange(8)
                             .build(ResourceKey.create(Registries.ENTITY_TYPE,
                                     Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "mini_queen"))));
+
+    public static final RegistryObject<EntityType<MujMobEntity>> MUJMOB =
+            ENTITY_TYPES.register("mujmob",
+                    () -> EntityType.Builder.<MujMobEntity>of(MujMobEntity::new, MobCategory.MONSTER)
+                            .sized(1.6f, 3.2f)
+                            .clientTrackingRange(8)
+                            .build(ResourceKey.create(Registries.ENTITY_TYPE,
+                                    Identifier.fromNamespaceAndPath(MujMod.MOD_ID, "mujmob"))));
 }

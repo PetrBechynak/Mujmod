@@ -35,12 +35,20 @@ public class MujMod {
         PlayerEvent.PlayerLoggedInEvent.BUS.addListener(TutorialSpawnHandler::onPlayerLoggedIn);
         EntityAttributeCreationEvent.BUS.addListener(event ->
                 event.put(ModEntities.MINI_QUEEN.get(), MiniQueenEntity.createAttributes().build()));
+        EntityAttributeCreationEvent.BUS.addListener(event ->
+            event.put(ModEntities.MUJMOB.get(), MujMobEntity.createAttributes().build()));
         EntityRenderersEvent.RegisterLayerDefinitions.BUS.addListener(event ->
                 event.registerLayerDefinition(MiniQueenModel.LAYER_LOCATION,
                         MiniQueenModel::createBodyLayer));
+        EntityRenderersEvent.RegisterLayerDefinitions.BUS.addListener(event ->
+            event.registerLayerDefinition(MujMobModel.LAYER_LOCATION,
+            MujMobModel::createBodyLayer));
         EntityRenderersEvent.RegisterRenderers.BUS.addListener(event ->
                 event.registerEntityRenderer(ModEntities.MINI_QUEEN.get(),
                         MiniQueenRenderer::new));
+        EntityRenderersEvent.RegisterRenderers.BUS.addListener(event ->
+            event.registerEntityRenderer(ModEntities.MUJMOB.get(),
+            MujMobRenderer::new));
 
         LOGGER.info("MujMod byl načten!");
     }
@@ -53,6 +61,7 @@ public class MujMod {
             event.accept(ModItems.MITHRIL_LEGGINGS);
             event.accept(ModItems.MITHRIL_BOOTS);
             event.accept(ModItems.MINI_QUEEN_SPAWN_EGG);
+            event.accept(ModItems.MUJMOB_SPAWN_EGG);
         }
 
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
